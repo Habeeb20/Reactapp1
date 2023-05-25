@@ -11,3 +11,56 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ul .item:focus {
+  text-decoration: underline;
+
+}
+
+
+
+.item svg:focus,
+.item svg:hover{
+  color: red;
+  outline: none;
+}
+
+.addform {
+  display: flex;
+}
+
+.addform input {
+  width: 50%;
+  height: 30px;
+  border-radius: 12%;
+  
+}
+
+.addform label {
+  visibility: hidden;
+}
+
+.addform button {
+  color: blue;
+}
+
+.addform button:hover {
+  background-color: rgb(166, 219, 85);
+  border-radius: 10px;
+  color: black;
+}
+
+.searchform {
+  display: flex;
+}
+.searchform label {
+  visibility: hidden;
+}
+
+.searchform input {
+  width: 50%;
+  height: 30px;
+  border-radius: 12%;
+  
+
+}

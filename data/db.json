@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "checked": false,
+      "item": "item1"
+    },
+    {
+      "id": 2,
+      "checked": false,
+      "item": "pizza"
+    },
+    {
+      "id": 3,
+      "checked": false,
+      "item": "bread"
+    },
+    {
+      "id": 4,
+      "checked": false,
+      "item": "bananna"
+    },
+    {
+      "id": 5,
+      "checked": false,
+      "item": "sugar"
+    },
+    {
+      "id": 6,
+      "checked": false,
+      "item": "sugar"
+    },
+    {
+      "id": 7,
+      "checked": false,
+      "item": "ball"
+    },
+    {
+      "id": 8,
+      "checked": false,
+      "item": "apple"
+    },
+    {
+      "id": 9,
+      "checked": false,
+      "item": "pineapple"
+    },
+    {
+      "id": 10,
+      "checked": false,
+      "item": "mango"
+    },
+    {
+      "id": 11,
+      "checked": false,
+      "item": "ball"
+    },
+    {
+      "id": 12,
+      "checked": false,
+      "item": "phone"
+    },
+    {
+      "id": 13,
+      "checked": false,
+      "item": "film"
+    },
+    {
+      "id": 14,
+      "checked": false,
+      "item": "fame"
+    }
+  ]
+}
