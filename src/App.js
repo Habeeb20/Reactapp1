@@ -9,7 +9,7 @@ import apiRequest from './apiRequest';
 
 
 function App() {
-  const API_URL = ('http://localhost:3500/items');
+  const API_URL = 'http://localhost:3500/items';
 
   // (JSON.parse(localStorage.getItem('shopping list'
   // )) ||
@@ -53,11 +53,11 @@ function App() {
 
   
 
-  const setAndSaveItems = (newItem) => {
+  /* const setAndSaveItems = (newItem) => {
     setItems(newItem)
     localStorage.setItem("shopping list", JSON.stringify(newItem));
 
-  }
+  } */
 
   const addItem = (item) => {
     const id = items.length ? items[items.length - 1].id + 1: 1;
@@ -82,7 +82,7 @@ function App() {
 
 
   
-    const HandleCheck = (id) => {
+  const HandleCheck = async (id) => {
     const listItems =  items.map((item) => item.id === id ? {...item,
     checked: !item.checked } : item);
     setItems(listItems);
@@ -96,32 +96,27 @@ function App() {
       },
       body:JSON.stringify({checked: myItem[0].checked})
     };
-    const reqUrl = '${API_URL}/${id}';
-    const result =  apiRequest(reqUrl, updateOptions);
+    const reqUrl = `${API_URL}/${id}`;
+    const result =  await apiRequest(reqUrl, updateOptions);
     if (result) setFetchError(result);
 
-   }
+  }
 
 
 
 
 
 
-    const HandleDelete = async(id) => {
+  const HandleDelete = async(id) => {
      const listItems = items.filter((item) => item.id !== id);
      setItems(listItems)
     //  localStorage.setItem("shopping list", JSON.stringify(listItems));
 
     const deleteOptions = { method: 'DELETE'};
-    const reqUrl = '${API_URL}/${id}';
+    const reqUrl = `${API_URL}/${id}`;
     const result =  apiRequest(reqUrl, deleteOptions);
     if (result) setFetchError(result);
-
-
-
-
-
-   }
+  }
    
    const HandleSubmit  = (e) => {
     e.preventDefault()
