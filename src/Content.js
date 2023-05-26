@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+
 import { FaTrashAlt } from 'react-icons/fa'
 
 
@@ -41,7 +41,7 @@ const Content = ({items, setItems, HandleCheck, HandleDelete}) => {
 
 
                 <label
-                style={(item.checked) ? {textDecoration: "line-through"} : null}
+                style={item.checked ? {textDecoration: "line-through"} : null}
                 onDoubleClick={() => HandleCheck(item.id)}>{item.item}</label>
 
 
@@ -49,9 +49,6 @@ const Content = ({items, setItems, HandleCheck, HandleDelete}) => {
                 onClick={() => HandleDelete(item.id)}
                 role='button' tabIndex='0'/>
                 
-                
-            
-
               </li>
             ))}
            

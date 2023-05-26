@@ -2,9 +2,10 @@ import React from 'react'
 import {FaPlus} from 'react-icons/fa'
 import { useRef } from 'react'
 
-const input = {useRef}
+
 
 const AddItem = ({newItem, setNewItem, HandleSubmit}) => {
+  const input = useRef();
   return (
     <form className='addform' onSubmit={HandleSubmit}>
         <label htmlFor="addItem">AddItem</label>
